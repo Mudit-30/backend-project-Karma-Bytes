@@ -3,7 +3,8 @@
     private String PdtName;
     private double price;
     private int quant;
-    public void create(int Idno, String name, double cost, int stock){
+    public void Create(int Idno, String name, double cost, int stock){
+     // Details describing the product 
         PdtName = name;
         idno = Idno;
         quant = stock;
@@ -30,11 +31,13 @@
 public class Backend {
     public static void main(String[] args) {
         Product pdt=new Product();
-        pdt.create(101, "Mobile", 10000.0, 100);
+        pdt.Create(101, "Mobile", 10000.0, 100); // data regarding the Product are initialized
         pdt.Read();
-        pdt.Update(9999);
+        pdt.Update(9999); // The price of the pdt is updated
+     //read the updated data
         pdt.Read();
         pdt.Delete();
+     //deleted data is shown as null
         pdt.Read();
     }
 }
